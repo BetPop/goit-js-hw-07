@@ -7,6 +7,8 @@ yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
 
+**/.DS_Store
+
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
@@ -104,12 +106,6 @@ dist
 .temp
 .cache
 
-# vitepress build output
-**/.vitepress/dist
-
-# vitepress cache directory
-**/.vitepress/cache
-
 # Docusaurus cache and generated files
 .docusaurus
 
@@ -134,3 +130,12 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Pull requests list
+pullrequests-list.txt
+
+# JetBrains IDE
+.idea
+
+# Backups
+**/backup/**
