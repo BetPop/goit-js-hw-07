@@ -1,1 +1,1 @@
-https://illja-popovics.github.io/goit-js-hw-07/
+https://github.com/BetPop/goit-js-hw-07
