@@ -13,24 +13,13 @@ const images = [
   },
 ];
 
+const galleryList = document.querySelector(".gallery");
 
-// Отримати список ul.gallery
-const galleryList = document.querySelector('.gallery');
+const markup = images
+  .map(
+    ({ url, alt }) =>
+      `<li><img src="${url}" alt="${alt}" width="300"></li>`
+  )
+  .join("");
 
-// Створити фрагмент для оптимізації додавання елементів в DOM
-const fragment = document.createDocumentFragment();
-
-// Створити елементи li зображень та додати їх до фрагменту
-images.forEach(image => {
-  const listItem = document.createElement('li');
-  const imageElement = document.createElement('img');
-  
-  imageElement.src = image.url;
-  imageElement.alt = image.alt;
-  
-  listItem.appendChild(imageElement);
-  fragment.appendChild(listItem);
-});
-
-// Додати фрагмент з усіма елементами до списку ul.gallery
-galleryList.appendChild(fragment);
+galleryList.insertAdjacentHTML("beforeend", markup);
